@@ -1,0 +1,41 @@
+p {
+    text-align: center;
+    font-size:xx-large;
+    font: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.yt-embed-holder {
+    position: absolute;
+    width: 20%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    pointer-events: none;
+}
+
+.yt-embed-holder iframe {
+    width: 150%;
+    height: 110%;
+    margin-left: -25%;
+}
+
+#textbox {
+    text-align: center;
+    font-size:xx-large;
+    font: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#arrow {
+    position: absolute;
+    z-index: 10;
+}
+
+body {
+    background-color:cornsilk
+}
+
+#arrow {
+    vertical-align: middle;
+    width: calc(20% - 20px);
+}
