@@ -3,6 +3,8 @@ const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
 //elements
+const englisch = document.getElementById("englisch");
+
 const clickArrow = document.getElementById("arrow");
 const clone_clickArrow = clickArrow.cloneNode(true);
 document.body.appendChild(clone_clickArrow);
@@ -29,7 +31,7 @@ const maxwell = document.getElementById("maxwell_div");
 
 //audio
 const maxwell_loop = document.getElementById("maxwell_loop")
-maxwell_loop.play()
+//maxwell_loop.play()
 
 var tick = 0, click = 0;
 var velocity;
@@ -86,12 +88,46 @@ function mb1ClickEventRun(){
     if (click < 2) {
         isJumping = true;
         jump();
-    } else if (click < 5) {
+    } else if (click < 20) {
         jump();
         isAvoidingCursor = false
-    } else if (click < 20) {
+    } else if (click < 50) {
         isJumping = false;
     }
+
+    switch (click) {
+        case 1:
+            englisch.textContent = "Almost Got it!";
+            break;
+        case 2:
+            englisch.textContent = "Come On";
+            break;
+        case 3:
+            englisch.textContent = "Just Click It";
+            break;
+        case 4:
+            englisch.textContent = "Click Already!";
+            break;
+        case 5:
+            englisch.textContent = "Almost";
+            break;
+        case 6:
+            englisch.textContent = "AGRRRR";
+            break;
+        case 7:
+            englisch.textContent = "PLEASE JUST CLICK IT";
+            break;
+        case 8:
+            englisch.textContent = "OH MY GOD JUST CLICK IT";
+            break;
+        case 9:
+            englisch.textContent = "Do I have to do everything myself?";
+            break;
+        case 10:
+            englisch.textContent = "text (Sorry Unfinished)";
+        break;
+    }
+
 }
 
 function avoidCursor(DOM, Group){
